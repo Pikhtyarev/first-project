@@ -1,0 +1,20 @@
+const smallestDivisor = (num) => {
+  // BEGIN (write your solution here)
+  if (num % 2 === 0)
+  {return 2;}
+  if (num === 1)
+  {return 1;}
+
+  const iter = (acc) => {
+    if (num % acc === 0) {
+      return acc
+      };
+    return iter(acc + 1);
+
+  };
+
+  return iter(2);
+
+  // END
+};
+console.log(smallestDivisor(17));
